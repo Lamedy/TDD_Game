@@ -8,7 +8,8 @@ namespace TDD_Game
 {
     public class Game
     {
-        bool turn_status = false;
+        private bool turn_status = false;
+        private bool haveWinner = false;
 
         public bool Start_Game(
             Button startGameButton,
@@ -64,6 +65,7 @@ namespace TDD_Game
                     buttons[row, 1].Text == currentSymbol &&
                     buttons[row, 2].Text == currentSymbol)
                 {
+                    haveWinner = true;
                     return true;
                 }
             }
@@ -75,6 +77,7 @@ namespace TDD_Game
                     buttons[1, col].Text == currentSymbol &&
                     buttons[2, col].Text == currentSymbol)
                 {
+                    haveWinner = true;
                     return true;
                 }
             }
@@ -84,6 +87,7 @@ namespace TDD_Game
                 buttons[1, 1].Text == currentSymbol &&
                 buttons[2, 2].Text == currentSymbol)
             {
+                haveWinner = true;
                 return true;
             }
 
@@ -92,6 +96,7 @@ namespace TDD_Game
                 buttons[1, 1].Text == currentSymbol &&
                 buttons[2, 0].Text == currentSymbol)
             {
+                haveWinner = true;
                 return true;
             }
 
@@ -110,8 +115,16 @@ namespace TDD_Game
                 button.Text = "";
                 button.Enabled = true;
             }
-            if (!turn_status) { turn_player.Text = "Player 2 is Win"; }
-            else { turn_player.Text = "Player 1 is Win"; }
+
+            if (haveWinner)
+            {
+                if (!turn_status) { turn_player.Text = "Player 2 is Win"; }
+                else { turn_player.Text = "Player 1 is Win"; }
+            } else
+            {
+                turn_player.Text = "Nobody Win";
+            }
+
             turn_status = false;
         }
     }
