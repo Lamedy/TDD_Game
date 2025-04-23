@@ -156,5 +156,36 @@ namespace TDD_Tests
 
             Assert.IsTrue(result);
         }
+
+        [Test]
+        public void Game_End()
+        {
+            Game game = new Game();
+
+            var startGameButton = new Button();
+
+            Button[,] buttons = new Button[3, 3]
+            {
+                { new Button(), new Button(), new Button() },
+                { new Button(), new Button(), new Button() },
+                { new Button(), new Button(), new Button() }
+            };
+
+            var turn_player = new Label();
+
+            bool result = game.Start_Game(
+                startGameButton,
+                buttons,
+                turn_player
+            );
+
+            game.End_Game(startGameButton, buttons, turn_player);
+
+            Assert.IsTrue(startGameButton.Visible);
+            foreach (var button in buttons)
+            {
+                Assert.IsFalse(button.Visible);
+            }
+        }
     }
 }
