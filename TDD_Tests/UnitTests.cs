@@ -43,5 +43,18 @@ namespace TDD_Tests
             Assert.IsTrue(turn_player.Visible);
             Assert.That(turn_player.Text, Is.EqualTo("Turn player 1"));
         }
+
+        [Test]
+        public void Turn_Player_1()
+        {
+            Game game = new Game();
+
+            var somePanelButton = new Button();
+            var turn_player_label = new Label();
+
+            string result = game.Next_Turn(somePanelButton, turn_player_label);
+
+            Assert.That(result, Is.EqualTo("0"));
+        }
     }
 }
