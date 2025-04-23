@@ -131,5 +131,30 @@ namespace TDD_Tests
 
             Assert.IsTrue(result);
         }
+
+        [Test]
+        public void Player_1_Win_Reverse_Diagonal_Line()
+        {
+            Game game = new Game();
+
+            Button[,] buttons = new Button[3, 3]
+            {
+                { new Button(), new Button(), new Button() },
+                { new Button(), new Button(), new Button() },
+                { new Button(), new Button(), new Button() }
+            };
+
+            var turn_player_label = new Label();
+
+            game.Next_Turn(buttons[0, 2], turn_player_label);   // Игрок 1
+            game.Next_Turn(buttons[0, 1], turn_player_label);   // Игрок 2
+            game.Next_Turn(buttons[1, 1], turn_player_label);   // Игрок 1
+            game.Next_Turn(buttons[1, 0], turn_player_label);   // Игрок 2
+            game.Next_Turn(buttons[2, 0], turn_player_label);   // Игрок 1 - победил
+
+            bool result = game.Check_Win(buttons);
+
+            Assert.IsTrue(result);
+        }
     }
 }
