@@ -125,6 +125,7 @@ namespace TDD_Game
                 turn_player.Text = "Nobody Win";
             }
 
+            haveWinner = false;
             turn_status = false;
         }
     }
