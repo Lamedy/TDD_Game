@@ -58,7 +58,7 @@ namespace TDD_Tests
         }
 
         [Test]
-        public void Player_1_Win()
+        public void Player_1_Win_Horizont_Line()
         {
             Game game = new Game();
 

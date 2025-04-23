@@ -52,5 +52,23 @@ namespace TDD_Game
 
             return playerSymbol;
         }
+
+        public bool Check_Win(Button[,] buttons)
+        {
+            string currentSymbol = turn_status ? "0" : "X";
+
+            // Проверка строк
+            for (int row = 0; row < 3; row++)
+            {
+                if (buttons[row, 0].Text == currentSymbol &&
+                    buttons[row, 1].Text == currentSymbol &&
+                    buttons[row, 2].Text == currentSymbol)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }
