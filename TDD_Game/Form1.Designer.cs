@@ -71,6 +71,7 @@
             button11.TabIndex = 2;
             button11.UseVisualStyleBackColor = true;
             button11.Visible = false;
+            button11.Click += button11_Click;
             // 
             // button12
             // 
@@ -80,6 +81,7 @@
             button12.TabIndex = 3;
             button12.UseVisualStyleBackColor = true;
             button12.Visible = false;
+            button12.Click += button12_Click;
             // 
             // button13
             // 
@@ -89,6 +91,7 @@
             button13.TabIndex = 4;
             button13.UseVisualStyleBackColor = true;
             button13.Visible = false;
+            button13.Click += button13_Click;
             // 
             // button21
             // 
@@ -98,6 +101,7 @@
             button21.TabIndex = 5;
             button21.UseVisualStyleBackColor = true;
             button21.Visible = false;
+            button21.Click += button21_Click;
             // 
             // button22
             // 
@@ -107,6 +111,7 @@
             button22.TabIndex = 6;
             button22.UseVisualStyleBackColor = true;
             button22.Visible = false;
+            button22.Click += button22_Click;
             // 
             // button23
             // 
@@ -116,6 +121,7 @@
             button23.TabIndex = 7;
             button23.UseVisualStyleBackColor = true;
             button23.Visible = false;
+            button23.Click += button23_Click;
             // 
             // button31
             // 
@@ -125,6 +131,7 @@
             button31.TabIndex = 8;
             button31.UseVisualStyleBackColor = true;
             button31.Visible = false;
+            button31.Click += button31_Click;
             // 
             // button32
             // 
@@ -134,6 +141,7 @@
             button32.TabIndex = 9;
             button32.UseVisualStyleBackColor = true;
             button32.Visible = false;
+            button32.Click += button32_Click;
             // 
             // button33
             // 
@@ -143,6 +151,7 @@
             button33.TabIndex = 10;
             button33.UseVisualStyleBackColor = true;
             button33.Visible = false;
+            button33.Click += button33_Click;
             // 
             // Form1
             // 
