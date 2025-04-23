@@ -68,6 +68,17 @@ namespace TDD_Game
                 }
             }
 
+            // Проверка столбцов
+            for (int col = 0; col < 3; col++)
+            {
+                if (buttons[0, col].Text == currentSymbol &&
+                    buttons[1, col].Text == currentSymbol &&
+                    buttons[2, col].Text == currentSymbol)
+                {
+                    return true;
+                }
+            }
+
             return false;
         }
     }
