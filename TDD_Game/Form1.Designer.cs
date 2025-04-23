@@ -61,6 +61,7 @@
             Start_Game_Button.TabIndex = 1;
             Start_Game_Button.Text = "Start Game";
             Start_Game_Button.UseVisualStyleBackColor = true;
+            Start_Game_Button.Click += Start_Game_Button_Click;
             // 
             // button11
             // 
