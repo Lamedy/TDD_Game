@@ -97,5 +97,22 @@ namespace TDD_Game
 
             return false;
         }
+
+        public void End_Game(
+                Button startGameButton,
+                Button[,] buttons,
+                Label turn_player)
+        {
+            startGameButton.Visible = true;
+            foreach (Button button in buttons)
+            {
+                button.Visible = false;
+                button.Text = "";
+                button.Enabled = true;
+            }
+            if (!turn_status) { turn_player.Text = "Player 2 is Win"; }
+            else { turn_player.Text = "Player 1 is Win"; }
+            turn_status = false;
+        }
     }
 }
