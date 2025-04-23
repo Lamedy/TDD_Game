@@ -79,6 +79,14 @@ namespace TDD_Game
                 }
             }
 
+            // Проверка главной диагонали
+            if (buttons[0, 0].Text == currentSymbol &&
+                buttons[1, 1].Text == currentSymbol &&
+                buttons[2, 2].Text == currentSymbol)
+            {
+                return true;
+            }
+
             return false;
         }
     }
